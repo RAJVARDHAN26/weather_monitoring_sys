@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #207b91, #306de0); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent white background */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Hover effect for the container */
+}
+
+/* Heading Styling */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 80px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+}
+
+/* Input Styling */
+input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #080101;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #2575fc;
+    outline: none;
+    background-color: #eaf1ff;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 30px;
+    border: none;
+    background-color: #2575fc;
+    color: #0e0606e2;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1d61cc;
+    transform: scale(1.05);
+}
+
+/* Weather Result Styling */
+#weather-result {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for weather result */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
