@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Left Section: Weather Image and Information */
+        .left-section {
+            flex: 1;
+            background: linear-gradient(to bottom, #6ec1e4, #4a90e2);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .left-section img {
+            width: 60%;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .left-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .left-section p {
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        /* Right Section: Input and Output */
+        .right-section {
+            flex: 1;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+            box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #004085;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        form input, form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form input {
+            background-color: #fff;
+        }
+
+        form button {
+            background-color: #004085;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        #weather-result {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #333;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-section, .right-section {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="../static/images/weather forecasting.png" alt="Weather Icon">
+            <h2>Understanding Weather Forecasting</h2>
+            <p>
+                Weather forecasting is the science of predicting future atmospheric conditions.
+                Using advanced tools, data models, and satellites, it provides insights into temperature, 
+                precipitation, wind patterns, and more. Our app helps you stay updated with accurate and 
+                real-time weather information.
+            </p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h1>Weather Forecast</h1>
+            <form id="weather-form">
+                <label for="city-input">Enter city:</label>
+                <input type="text" id="city-input" name="city" placeholder="e.g., New York" required>
+                <button type="submit">Get Weather</button>
+            </form>
+            <div id="weather-result"></div>
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
